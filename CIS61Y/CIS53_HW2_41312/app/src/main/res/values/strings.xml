@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CIS53_HW2_41312</string>
     <string name="action_settings">Settings</string>
+    <string name="hello_myname">Hello there, my name is Subal</string>
 </resources>
