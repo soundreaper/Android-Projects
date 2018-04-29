@@ -1,4 +1,4 @@
-package edu.deanza.cis53_hw2_41312;
+package edu.deanza.cis53_hw3_41312;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -11,11 +11,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String APP_TAG = "CIS53-HW2-41312";
+    public static final String APP_TAG = "CIS53_HW3_41312";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d(APP_TAG,"onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -43,22 +42,16 @@ public class MainActivity extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Log.d(APP_TAG, "onOptionsItemSelected Settings");
+            return true;
+        } else if(id == R.id.action_refresh) {
+            Log.d(APP_TAG, "onOptionsItemSelected Refresh");
             return true;
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-
-        Log.d(APP_TAG, "onPause");
     }
 }
