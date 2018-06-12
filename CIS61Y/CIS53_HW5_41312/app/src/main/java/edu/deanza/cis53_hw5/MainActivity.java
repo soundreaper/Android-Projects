@@ -1,5 +1,6 @@
-package edu.deanza.cis53_hw4;
+package edu.deanza.cis53_hw5;
 
+import android.app.Fragment;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,25 +13,23 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    static String APP_TAG ="CIS53_HW5_41312";
-    static final String CITY = "95112,US";
-    static final String DAYS = "7";
+    public static String APP_TAG = "CIS53_HW5_41312";
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
     }
 
     @Override
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
+    /*@Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -51,14 +50,14 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
-        else if (id == R.id.action_refresh)
-        {
-            new MainActivityFragment.FetchWeatherTask().execute(CITY, DAYS);
+        else if(id == R.id.action_refresh){
+        Log.d(APP_TAG,"onOptionsItemSelected Refresh");
+            MainActivityFragment.FetchWeatherTask f1 = new MainActivityFragment.FetchWeatherTask();
             return true;
         }
+
+
+
         return super.onOptionsItemSelected(item);
-    }
-
-
+    }*/
 }

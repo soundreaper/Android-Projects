@@ -1,22 +1,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="edu.deanza.cis53_hw4.MainActivity">
+    tools:context="edu.deanza.cis53_hw5.MainActivity">
     <item
         android:id="@+id/action_settings"
-        android:orderInCategory="3"
+        android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
     <item
+        android:id="@+id/action_map"
+        android:orderInCategory="100"
+        android:title="@string/action_map"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/action_refresh"
-        android:orderInCategory="2"
+        android:orderInCategory="100"
         android:title="@string/action_refresh"
         app:showAsAction="always" />
-    <item
-        android:id="@+id/menu_share"
-        android:title="@string/menu_share"
-        android:orderInCategory="1"
-        app:showAsAction="always"
-        app:actionProviderClass="android.support.v7.widget.ShareActionProvider" />
-
 </menu>
